@@ -935,9 +935,9 @@ PODS:
   - React-Mapbuffer (0.74.2):
     - glog
     - React-debug
-  - react-native-usercentrics (2.15.3):
+  - react-native-usercentrics (2.18.4):
     - React
-    - UsercentricsUI (= 2.15.2)
+    - UsercentricsUI (= 2.18.4)
   - React-nativeconfig (0.74.2)
   - React-NativeModulesApple (0.74.2):
     - glog
@@ -1168,9 +1168,9 @@ PODS:
     - React-perflogger (= 0.74.2)
     - React-utils (= 0.74.2)
   - SocketRocket (0.7.0)
-  - Usercentrics (2.15.2)
-  - UsercentricsUI (2.15.2):
-    - Usercentrics (= 2.15.2)
+  - Usercentrics (2.18.4)
+  - UsercentricsUI (2.18.4):
+    - Usercentrics (= 2.18.4)
   - Yoga (0.0.0)
 
 DEPENDENCIES:
@@ -1382,7 +1382,7 @@ SPEC CHECKSUMS:
   React-jsitracing: 0fa7f78d8fdda794667cb2e6f19c874c1cf31d7e
   React-logger: 29fa3e048f5f67fe396bc08af7606426d9bd7b5d
   React-Mapbuffer: bf56147c9775491e53122a94c423ac201417e326
-  react-native-usercentrics: 8eeb5080af50877f5b7d02b20fc9ed9d6ddede80
+  react-native-usercentrics: 6d4a0784a822c77eb4e945eb0b3be65b6a8c7e5a
   React-nativeconfig: 9f223cd321823afdecf59ed00861ab2d69ee0fc1
   React-NativeModulesApple: ff7efaff7098639db5631236cfd91d60abff04c0
   React-perflogger: 32ed45d9cee02cf6639acae34251590dccd30994
@@ -1407,10 +1407,10 @@ SPEC CHECKSUMS:
   React-utils: 4476b7fcbbd95cfd002f3e778616155241d86e31
   ReactCommon: ecad995f26e0d1e24061f60f4e5d74782f003f12
   SocketRocket: abac6f5de4d4d62d24e11868d7a2f427e0ef940d
-  Usercentrics: 94d99e5585d028994363133b1a143dbf5334d482
-  UsercentricsUI: e7165daa33207e3c15dd27f4cd77ee13a2b378f4
+  Usercentrics: d8b539d3dcaf5798513a203073e296fc9d55164c
+  UsercentricsUI: 0929c61f1b1cd8347c46568bd0d80258c96354fe
   Yoga: ae3c32c514802d30f687a04a6a35b348506d411f
 
 PODFILE CHECKSUM: 900186d34a586c46e21595b3b63e5414cc41ad28
 
-COCOAPODS: 1.15.2
+COCOAPODS: 1.16.2

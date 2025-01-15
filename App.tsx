@@ -16,11 +16,13 @@ import {
   ButtonType,
   LegalLinksSettings,
   UsercentricsConsentUserResponse,
+  BannerLogo,
 } from '@usercentrics/react-native-sdk';
 import React from 'react';
 import type {PropsWithChildren} from 'react';
 import {
   Button,
+  Image,
   SafeAreaView,
   ScrollView,
   StatusBar,
@@ -64,13 +66,13 @@ function Section({children, title}: SectionProps): React.JSX.Element {
   );
 }
 
-const settingsId = 'hJA_TtltiEL_g8';
+const settingsId = '3k3ooX9lEOzlnE';
 
 function App(): React.JSX.Element {
   React.useEffect(() => {
     let options: UsercentricsOptions = {settingsId: settingsId};
     options.loggerLevel = UsercentricsLoggerLevel.debug;
-    options.consentMediation = true;
+    options.consentMediation = false;
     Usercentrics.configure(options);
     showBanner();
   }, [showBanner]);
@@ -119,11 +121,23 @@ function App(): React.JSX.Element {
         boldFont: 'Lora-Regular_Bold',
         fontSize: 12.0,
       },
-      logo: undefined,
+      logo: createBannerLogo(),
       links: LegalLinksSettings.both,
       disableSystemBackButton: false,
     },
   };
+
+  function createBannerLogo(): BannerLogo {
+    // Logo name is used for iOS and the Image.resolveAssetSource is used for Android.
+    const customLogo = new BannerLogo(
+      'logo.png',
+      Image.resolveAssetSource(require('./assets/images/logo.png')),
+    );
+    console.log(
+      `customLOGO ----- logoName: ${customLogo.logoName} -- logoPath: ${customLogo.logoPath}`,
+    );
+    return customLogo;
+  }
 
   // eslint-disable-next-line react-hooks/exhaustive-deps
   async function showBanner() {
@@ -146,7 +160,7 @@ function App(): React.JSX.Element {
   }
 
   async function showSecondLayer() {
-    const response = await Usercentrics.showSecondLayer(bannerSettingsCustom);
+    const response = await Usercentrics.showSecondLayer();
     consentsLogger(response);
   }
 
